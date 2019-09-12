@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerCore", "IdentityServerCore\IdentityServerCore.csproj", "{44B44476-827B-403F-BF62-C9A726893370}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityTestApi", "IdentityTestApi\IdentityTestApi.csproj", "{BAACEB73-098F-47C1-B04C-3D4C9AF473A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityTestApi", "IdentityTestApi\IdentityTestApi.csproj", "{BAACEB73-098F-47C1-B04C-3D4C9AF473A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityTestMvc", "IdentityTestMvc\IdentityTestMvc.csproj", "{83A47FE5-4A52-434C-ABE8-F710E1917C14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BAACEB73-098F-47C1-B04C-3D4C9AF473A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAACEB73-098F-47C1-B04C-3D4C9AF473A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAACEB73-098F-47C1-B04C-3D4C9AF473A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A47FE5-4A52-434C-ABE8-F710E1917C14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A47FE5-4A52-434C-ABE8-F710E1917C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A47FE5-4A52-434C-ABE8-F710E1917C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A47FE5-4A52-434C-ABE8-F710E1917C14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

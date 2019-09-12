@@ -1,4 +1,5 @@
-﻿using IdentityServer4.Models;
+﻿using IdentityServer4;
+using IdentityServer4.Models;
 using IdentityServer4.Test;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,15 @@ namespace IdentityServerCore
     public class Config
 
     {
+        public static IEnumerable<IdentityResource> GetIdentityResources()
+        {
+            return new List<IdentityResource>
+            {
+                new IdentityResources.OpenId(),
+                new IdentityResources.Profile()
+            };
+        }
+
         public static List<TestUser> GetUsers()
         {
             return new List<TestUser>
@@ -54,6 +64,21 @@ namespace IdentityServerCore
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     ClientSecrets = { new Secret("secret".Sha256()) },
                     AllowedScopes = { "api1" }
+                },
+                new Client
+                {
+                    ClientId= "mvc",
+                    ClientName="MVC Client",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    
+                    RedirectUris = { "http://localhost:5003/signin-oidc"},
+                    PostLogoutRedirectUris = { "http://localhost:5003/signout-callback" },
+
+                    AllowedScopes = new List<string>
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile
+                    }
                 }
             };
         }

@@ -74,8 +74,8 @@ namespace IdentityServerCore
     {
         new Secret("secret".Sha256())
     },
-                    RedirectUris = { "http://localhost:5003/signin-oidc"},
-                    PostLogoutRedirectUris = { "http://localhost:5003/signout-callback-oidc" },
+                    RedirectUris = { "http://localhost:5003/signin-oidc","http://localhost:4200/index.html"},
+                    PostLogoutRedirectUris = { "http://localhost:5003/signout-callback-oidc" ,"http://localhost:4200/index.html"},
 
                     AllowedScopes = new List<string>
                     {
@@ -83,7 +83,8 @@ namespace IdentityServerCore
                         IdentityServerConstants.StandardScopes.Profile,
                         "api1"
                     },
-                    AllowOfflineAccess = true
+                    AllowOfflineAccess = true,
+                    AllowAccessTokensViaBrowser = true
                 }
             };
         }

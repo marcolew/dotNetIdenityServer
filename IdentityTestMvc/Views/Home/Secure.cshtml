@@ -1,4 +1,5 @@
 ﻿
+@using Microsoft.AspNetCore.Authentication
 @{
     ViewData["Title"] = "Secure";
 }
@@ -12,5 +13,16 @@
     {
         <dt>@item.Type</dt>
         <dt>@item.Value</dt>
+    }
+
+</dl>
+
+<h3>Properties</h3>
+
+<dl>
+    @foreach (var prop in (await Context.AuthenticateAsync()).Properties.Items)
+    {
+        <dt>@prop.Key</dt>
+        <dd>@prop.Value</dd>
     }
 </dl>
